@@ -1,0 +1,6 @@
+BIGGER - constant or logarithmic
+UPTO MILLION - linear or lin-logarithmic
+UPTO FIVE THOUSAND - n^2
+UPTO FIVE HUNDRED - n^3
+UPTO TWENTY - 2^n
+UPTO TEN - n!

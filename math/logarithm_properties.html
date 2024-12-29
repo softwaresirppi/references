@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Tuesday, October 20, 1998 09:01 AM -->
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="JavaScript">
+	var jc;
+	var jg;
+	var js;
+	var jh;
+	var ans;
+	function jump(where)
+	{
+		window.location.replace(where);
+	}
+
+	function logid()
+	{
+		winClose(ans);
+		ans = window.open('','answ','width=200,height=100');
+		ans.document.write('<TABLE BORDER="1"><TR><TD>logarithmic identity 1</TD>');
+		ans.document.write('<TD><P ALIGN="RIGHT"><IMG SRC="../log/logid1.gif" WIDTH="98" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"></TD></TR>');
+		ans.document.write('<TR><TD>logarithmic identity 2</TD><TD>');
+		ans.document.write('<P ALIGN="RIGHT"><IMG SRC="../log/logid2.gif" WIDTH="97" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"></TD></TR></TABLE>');
+		ans.document.close();
+	}
+	function ans1()
+	{
+		winClose(ans);
+		ans = window.open('','answ','width=200,height=150');
+		ans.document.write('<P>Using the Java Calculator:</P>');
+		ans.document.write('<img src="ans1.gif">');
+		ans.document.close();
+	}
+	function ans2()
+	{
+		winClose(ans);
+		ans = window.open('','answ','width=250,height=250');
+		ans.document.write('<P>Using the Java Calculator:</P>');
+		ans.document.write('<img src="ans2.gif">');
+		ans.document.write('<P>Note that "a" holds the result of the last calculation.  See the calculator help file for more information.');
+		ans.document.close();
+	}
+	function ans3a()
+	{
+		winClose(ans);
+		ans = window.open('','answ','width=200,height=150');
+		ans.document.write('<P>ln x - (1/2) ln (x<sup>2</sup> + 1)</P>');
+		ans.document.close();
+	}
+	function ans3b()
+	{
+		winClose(ans);
+		ans = window.open('','answ','width=100,height=100');
+		ans.document.write('<img src="ans3b.gif">');
+		ans.document.close();
+	}
+
+	function calc()
+	{
+		jc = window.open("http://www.uncwil.edu/courses/mat111hb/calculators/numcalc.html","calc","width=310,height=310");
+	}
+	function grapher()
+	{
+		jg = window.open("http://www.uncwil.edu/courses/mat111hb/calculators/graphcalc.html","grapher","width=610,height=400");
+	}
+	function scatter()
+	{
+		js = window.open("http://www.uncwil.edu/courses/mat111hb/calculators/scatcalc.html","plotter","width=610,height=420");
+	}
+	function calchelp()
+	{
+		jh = window.open("http://www.uncwil.edu/courses/mat111hb/calculators/help.html","help","width=600,height=350,scrollbars=yes");
+	}
+	function winClose(win)
+	{
+		if(win != null) 
+			if(!win.closed)
+				win.close();
+		win = null;
+	}
+	function cleanUp()
+	{
+		winClose(jc); winClose(jg); winClose(js); winClose(jh); winClose(ans);
+	}
+
+	</script>
+
+	<meta name="GENERATOR" content="Visual Page 1.1a for Windows">
+	<meta name="Author" content="Jeff Brown">
+	<title>Properties of Logarithms</title>
+</head>
+
+<body onunload="cleanUp()" bgcolor="#FFFFFF">
+
+<p>
+<table width="100%" border="0">
+	<tbody><tr>
+		<td width="50%">
+			<h1>Properties of Logarithms
+		</h1></td>
+		<td width="50%">
+			<h3 align="RIGHT"></h3>
+			<div align="RIGHT">
+			<p>
+			<table border="1">
+				<tbody><tr>
+					<td>
+						<h4 align="CENTER"><a href="javascript:grapher()">Grapher</a>
+					</h4></td>
+					<td>
+						<h4 align="RIGHT"><a href="javascript:calc()">Calculator</a>
+					</h4></td>
+					<td rowspan="2">
+						<h4 align="CENTER"><a href="javascript:history.back()">Return</a>
+					</h4></td>
+				</tr>
+				<tr>
+					<td>
+						<h4><a href="javascript:calchelp()">Help</a>
+					</h4></td>
+					<td>
+						<h4><a href="javascript:scatter()">Scatter Plot</a>
+					</h4></td>
+				</tr>
+			</tbody></table>
+
+</p></div>
+		</td>
+	</tr>
+</tbody></table>
+
+</p><hr align="CENTER">
+<p></p>
+
+<p><a name="content"></a><strong>Contents:</strong> This page corresponds to <strong>§</strong> <strong>4.3
+(p. 341)</strong> of the text.</p>
+
+<p>Suggested problems from text:</p>
+
+<p>p. 345 #3, 7, 9, 11, 13, 25, 27, 33, 35, 45, 49, 53, 91</p>
+
+
+<blockquote>
+	<h3><a href="javascript:jump('#sec1')">Change of Base</a></h3>
+	<h3><a href="javascript:jump('#sec2')">Properties of Logarithms</a></h3>
+
+</blockquote>
+
+<p>
+</p><hr align="CENTER">
+<p></p>
+<h2><a name="sec1"></a>Change of Base</h2>
+<p>While most scientific calculators have buttons for only the common logarithm and the natural logarithm, other
+logarithms may be evaluated with the following change-of-base formula.</p>
+<p><b>Change-of-base Formula</b></p>
+<p align="CENTER"><img src="logarithm_properties_files/base.gif" width="128" height="39" border="0" align="BOTTOM"></p>
+<p><u>Example 1</u>.</p>
+
+
+<blockquote>
+	<p>Evaluate log<sub>5</sub> 3. The change-of-base formula allows us to evaluate this expression using any other
+	logarithm, so we will solve this problem in two ways, using first the natural logarithm, then the common logarithm.</p>
+	<p>Natural Logarithm:</p>
+	<p align="CENTER"><img src="logarithm_properties_files/examp1a.gif" width="186" height="119" border="0" align="BOTTOM"></p>
+	<p>Common Logarithm:</p>
+	<p align="CENTER"><img src="logarithm_properties_files/examp1b.gif" width="182" height="124" border="0" align="BOTTOM"></p>
+
+</blockquote>
+
+<p><a name="ex1"></a><b><i>Exercise 1</i></b>:</p>
+
+
+<blockquote>
+	<p>It follows from <a href="javascript:logid()">logarithmic identity 1</a> that log<sub>2</sub> 8 = 3.</p>
+	<p>(a) Use a calculator and the change-of-base formula with the natural logarithm to verify that log<sub>2</sub>
+	8 = 3.</p>
+	<p>(b) Use a calculator and the change-of-base formula with the common logarithm to verify that log<sub>2</sub>
+	8 = 3.</p>
+	<p><a href="javascript:ans1()">Answer</a></p>
+
+</blockquote>
+
+<p><a name="ex2"></a><b><i>Exercise 2</i></b>:</p>
+
+
+<blockquote>
+	<p>It follows from <a href="javascript:logid()">logarithmic identity 2</a> that <img src="logarithm_properties_files/ex2.gif" width="86" height="22" border="0" align="BOTTOM">. Verify this by evaluating log<sub>4</sub> 7, then raising 4 to that power.</p>
+	<p><a href="javascript:ans2()">Answer</a></p>
+
+</blockquote>
+
+<p><a href="javascript:jump('#content')"><strong>Return to Contents</strong></a></p>
+<h2><a name="sec2"></a>Properties of Logarithms</h2>
+<center>
+<p>
+<table border="1">
+	<tbody><tr>
+		<td>1. log<sub>a</sub> (uv) = log<sub>a</sub> u + log<sub>a</sub> v</td>
+		<td>1. ln (uv) = ln u + ln v</td>
+	</tr>
+	<tr>
+		<td>2. log<sub>a</sub> (u / v) = log<sub>a</sub> u - log<sub>a</sub> v</td>
+		<td>2. ln (u / v) = ln u - ln v</td>
+	</tr>
+	<tr>
+		<td>3. log<sub>a</sub> u<sup>n</sup> = n log<sub>a</sub> u</td>
+		<td>3. ln u<sup>n</sup> = n ln u</td>
+	</tr>
+</tbody></table>
+</p>
+</center>
+<p align="CENTER">The properties on the left hold for any base a.</p>
+<p align="CENTER">The properties on the right are restatements of the general properties for the natural logarithm.</p>
+<p>Many logarithmic expressions may be rewritten, either expanded or condensed, using the three properties above.
+Expanding is breaking down a complicated expression into simpler components. Condensing is the reverse of this
+process.</p>
+<p><u>Example 2</u>.</p>
+
+
+<blockquote>
+	<p>Expanding an expression.</p>
+	<p>
+	<table border="1">
+	<tbody><tr>
+		<td rowspan="3">
+			<p align="CENTER"><img src="logarithm_properties_files/examp2.gif" width="280" height="121" border="0" align="BOTTOM">
+		</p></td>
+		<td>rewrite using exponential notation</td>
+	</tr>
+	<tr>
+		<td>property 3</td>
+	</tr>
+	<tr>
+		<td>property 1</td>
+	</tr>
+	</tbody></table>
+</p>
+
+</blockquote>
+
+<p><u>Example 3</u>.</p>
+
+
+<blockquote>
+	<p>Expanding an expression.</p>
+	<p>
+	<table border="1">
+	<tbody><tr>
+		<td rowspan="3">
+			<p align="CENTER"><img src="logarithm_properties_files/examp3.gif" width="258" height="106" border="0" align="BOTTOM">
+		</p></td>
+		<td>property 2</td>
+	</tr>
+	<tr>
+		<td>property 1</td>
+	</tr>
+	<tr>
+		<td>property 3</td>
+	</tr>
+	</tbody></table>
+</p>
+
+</blockquote>
+
+<p><u>Example 4</u>.</p>
+
+
+<blockquote>
+	<p>Condensing an expression.</p>
+	<p>
+	<table border="1">
+	<tbody><tr>
+		<td rowspan="3">
+			<p align="CENTER"><img src="logarithm_properties_files/examp4.gif" width="431" height="127" border="0" align="BOTTOM">
+		</p></td>
+		<td>property 3</td>
+	</tr>
+	<tr>
+		<td>property 1</td>
+	</tr>
+	<tr>
+		<td>property 2</td>
+	</tr>
+	</tbody></table>
+</p>
+
+</blockquote>
+
+<p><b>Common Mistakes</b></p>
+
+<ul>
+	<li>Logarithms break products into sums by property 1, but the <i>logarithm of a sum cannot be rewritten</i>. For
+	instance, there is nothing we can do to the expression ln( x<sup>2</sup> + 1).
+	</li><li>log u - log v is equal to log (u / v) by property 2, <i>it is not equal to</i> log u / log v.
+</li></ul>
+
+<p><a name="ex3"></a><b><i>Exercise 3</i></b>:</p>
+
+
+<blockquote>
+	<p>(a) Expand the expression <img src="logarithm_properties_files/ex3a.gif" width="74" height="28" border="0" align="BOTTOM">. <a href="javascript:ans3a()">Answer</a></p>
+	<p>(b) Condense the expression 3 log x + 2 log y - (1/2) log z. <a href="javascript:ans3b()">Answer</a></p>
+
+</blockquote>
+
+<p><a href="javascript:jump('#content')"><strong>Return to Contents</strong></a></p>
+<h4>
+<hr align="CENTER">
+</h4>
+<p>
+<table width="100%" border="0">
+	<tbody><tr>
+		<td width="50%"></td>
+		<td width="50%">
+			<h3 align="RIGHT"></h3>
+			<div align="RIGHT">
+			<p>
+			<table border="1">
+				<tbody><tr>
+					<td>
+						<h4 align="CENTER"><a href="javascript:grapher()">Grapher</a>
+					</h4></td>
+					<td>
+						<h4 align="RIGHT"><a href="javascript:calc()">Calculator</a>
+					</h4></td>
+					<td rowspan="2">
+						<h4 align="CENTER"><a href="javascript:history.back()">Return</a>
+					</h4></td>
+				</tr>
+				<tr>
+					<td>
+						<h4><a href="javascript:calchelp()">Help</a>
+					</h4></td>
+					<td>
+						<h4><a href="javascript:scatter()">Scatter Plot</a>
+					</h4></td>
+				</tr>
+			</tbody></table>
+
+</p></div>
+		</td>
+	</tr>
+</tbody></table>
+
+</p><h3>
+
+
+
+</h3></body></html>

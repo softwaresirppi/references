@@ -1,0 +1,42 @@
+\x1b[ opcode1;opcode2;opcode3... m
+  ___                       _   _                 
+ / _ \ _ __   ___ _ __ __ _| |_(_) ___  _ __  ___ 
+| | | | '_ \ / _ \ '__/ _` | __| |/ _ \| '_ \/ __|
+| |_| | |_) |  __/ | | (_| | |_| | (_) | | | \__ \
+ \___/| .__/ \___|_|  \__,_|\__|_|\___/|_| |_|___/
+      |_|                                         
+  0 - RESET
+  0(STYLE) - SET STYLE
+  2(STYLE) - UNSET STYLE
+  3(COLOR) - SET FOREGROUND
+  4(COLOR) - SET BRIGHT FOREGROUND
+  9(COLOR) - SET BRIGHT FOREGROUND
+  10(COLOR) - SET BRIGHT FOREGROUND
+
+  ____ ___  _     ___  ____  ____  
+ / ___/ _ \| |   / _ \|  _ \/ ___| 
+| |  | | | | |  | | | | |_) \___ \ 
+| |__| |_| | |__| |_| |  _ < ___) |
+ \____\___/|_____\___/|_| \_\____/ 
+  01  2 3    4 5   6 7  9
+  BRinG Your BoMb, CoWarD
+  LE  R E    L A   Y H  E
+  AD  E L    U G   A I  F
+  C   E L    E E   N T  A
+  K   N O      N     E  U
+        W      T        L
+               A        T  
+ ____ _______   ___     _____ ____  
+/ ___|_   _\ \ / / |   | ____/ ___| 
+\___ \ | |  \ V /| |   |  _| \___ \ 
+ ___) || |   | | | |___| |___ ___) |
+|____/ |_|   |_| |_____|_____|____/ 
+  1 bold
+  2 faint
+  3 italic
+  4 underline
+  5 slow blink
+  6 rapid blink
+  7 reverse
+  8 conceal
+  9 crossed-out
